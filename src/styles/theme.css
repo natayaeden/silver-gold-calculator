@@ -1,0 +1,87 @@
+:root {
+  /* Gold palette */
+  --gold-50: #fffef5;
+  --gold-100: #fef9e7;
+  --gold-200: #fcf0c3;
+  --gold-300: #f9e08c;
+  --gold-400: #f5cc4a;
+  --gold-500: #e8b923;
+  --gold-600: #c9971a;
+  --gold-700: #a16f17;
+  --gold-800: #845719;
+  --gold-900: #6f4919;
+
+  /* Silver palette */
+  --silver-50: #f8f9fa;
+  --silver-100: #eef0f2;
+  --silver-200: #dce0e5;
+  --silver-300: #b8c1ca;
+  --silver-400: #8f9ca9;
+  --silver-500: #6b7886;
+  --silver-600: #55606b;
+  --silver-700: #454d56;
+  --silver-800: #3a4149;
+  --silver-900: #2d3339;
+
+  /* Neutrals & accents */
+  --bg-dark: #fbf7ef;
+  --bg-card: rgba(255, 255, 255, 0.82);
+  --bg-card-hover: rgba(255, 255, 255, 0.92);
+  --text-primary: #1a1814;
+  --text-muted: #6a5d49;
+  --border-gold: rgba(232, 185, 35, 0.38);
+  --border-silver: rgba(143, 156, 169, 0.35);
+  --shadow-glow: 0 10px 30px rgba(26, 24, 20, 0.08);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle metallic bg pattern */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 55% at 35% -10%, rgba(232, 185, 35, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 55%, rgba(143, 156, 169, 0.14), transparent 60%),
+    radial-gradient(ellipse 90% 60% at 50% 120%, rgba(232, 185, 35, 0.10), transparent 60%),
+    linear-gradient(180deg, #fffdf7 0%, #fbf7ef 40%, #f7f1e6 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+input, select, button {
+  font-family: var(--font-body);
+}
+
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}

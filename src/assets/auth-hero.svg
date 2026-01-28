@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Gold and silver illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf7"/>
+      <stop offset="1" stop-color="#fbf7ef"/>
+    </linearGradient>
+    <radialGradient id="gGlow" cx="35%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#f5cc4a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f5cc4a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sGlow" cx="70%" cy="60%" r="65%">
+      <stop offset="0" stop-color="#8f9ca9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8f9ca9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9e08c"/>
+      <stop offset="0.5" stop-color="#e8b923"/>
+      <stop offset="1" stop-color="#c9971a"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef0f2"/>
+      <stop offset="0.5" stop-color="#b8c1ca"/>
+      <stop offset="1" stop-color="#6b7886"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#1a1814" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="700" fill="url(#bg)"/>
+  <rect width="900" height="700" fill="url(#gGlow)"/>
+  <rect width="900" height="700" fill="url(#sGlow)"/>
+
+  <!-- Decorative curves -->
+  <path d="M-40,140 C180,40 330,120 450,160 C610,212 720,170 980,40 L980,-20 L-40,-20 Z"
+        fill="#ffffff" opacity="0.55"/>
+  <path d="M-40,720 C200,580 340,610 470,650 C640,704 740,680 980,560 L980,720 L-40,720 Z"
+        fill="#ffffff" opacity="0.45"/>
+
+  <!-- Coins -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="330" cy="435" rx="190" ry="46" fill="#1a1814" opacity="0.06"/>
+    <ellipse cx="560" cy="505" rx="210" ry="52" fill="#1a1814" opacity="0.05"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <!-- Gold coin -->
+    <g transform="translate(210 250) rotate(-10 220 210)">
+      <circle cx="220" cy="210" r="165" fill="url(#gold)"/>
+      <circle cx="220" cy="210" r="150" fill="none" stroke="#fffdf7" stroke-opacity="0.55" stroke-width="10"/>
+      <circle cx="220" cy="210" r="118" fill="rgba(255,255,255,0.18)"/>
+      <path d="M160 212 C190 162 250 152 280 200 C300 232 286 275 245 285 C205 295 170 262 160 212 Z"
+            fill="#fffdf7" opacity="0.6"/>
+      <text x="220" y="228" font-family="Georgia, serif" font-size="54" text-anchor="middle" fill="#1a1814" opacity="0.78">Au</text>
+      <text x="220" y="266" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#1a1814" opacity="0.55">GOLD</text>
+    </g>
+
+    <!-- Silver coin -->
+    <g transform="translate(390 300) rotate(8 220 210)">
+      <circle cx="220" cy="210" r="176" fill="url(#silver)"/>
+      <circle cx="220" cy="210" r="160" fill="none" stroke="#fffdf7" stroke-opacity="0.55" stroke-width="10"/>
+      <circle cx="220" cy="210" r="124" fill="rgba(255,255,255,0.20)"/>
+      <path d="M165 240 C205 190 265 185 295 225 C318 257 300 304 255 310 C212 316 178 286 165 240 Z"
+            fill="#fffdf7" opacity="0.62"/>
+      <text x="220" y="228" font-family="Georgia, serif" font-size="54" text-anchor="middle" fill="#2d3339" opacity="0.78">Ag</text>
+      <text x="220" y="266" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#2d3339" opacity="0.55">SILVER</text>
+    </g>
+  </g>
+
+  <!-- Sparkles -->
+  <g opacity="0.7">
+    <path d="M120 210 l12 30 l30 12 l-30 12 l-12 30 l-12-30 l-30-12 l30-12 Z" fill="#e8b923"/>
+    <path d="M745 245 l10 24 l24 10 l-24 10 l-10 24 l-10-24 l-24-10 l24-10 Z" fill="#8f9ca9"/>
+    <path d="M700 420 l8 18 l18 8 l-18 8 l-8 18 l-8-18 l-18-8 l18-8 Z" fill="#e8b923" opacity="0.6"/>
+  </g>
+</svg>
